@@ -1,0 +1,21 @@
+body,
+h1,
+ul {
+  margin: 0;
+  padding: 0;
+  background-image: url("img/layer.png");
+}
+
+header {
+  background-color: white;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.logo h1 {
+  font-family: "Ranchers", cursive;
+  background-image: url("img/shape.png");
+  background-repeat: no-repeat;
+  background-position: 10%;
+  padding-left: 20px;
+}
