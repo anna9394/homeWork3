@@ -3,19 +3,61 @@ h1,
 ul {
   margin: 0;
   padding: 0;
+}
+
+body {
   background-image: url("img/layer.png");
+  box-sizing: border-box;
+  font-family: Arial;
+  font-size: 14px;
+  color: #b8b8b8;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 header {
+  display: flex;
+  justify-content: space-between;
   background-color: white;
   max-width: 950px;
-  margin: 0 auto;
+  min-height: 105px;
+  margin: 60px auto;
+  padding: 0 30px;
 }
 
-.logo h1 {
+.header-logo {
+  max-width: 320px;
   font-family: "Ranchers", cursive;
+  color: #9e744a;
   background-image: url("img/shape.png");
   background-repeat: no-repeat;
-  background-position: 10%;
-  padding-left: 20px;
+  background-position: 5%;
+  padding: 40px 140px 40px 80px;
+}
+
+.header-menu {
+  display: flex;
+  justify-content: flex-end;
+  padding: 50px 50px 50px 80px;
+  list-style: none;
+  max-width: 420px;
+}
+
+.header-menu a {
+  padding-left: 70px;
+}
+
+.header-menu a:hover {
+  color: #8a6540;
+}
+
+.content {
+  background-color: white;
+  max-width: 950px;
+  min-height: 105px;
+  margin: 60px auto;
+  padding: 0 30px;
 }
