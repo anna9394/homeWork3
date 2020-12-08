@@ -133,6 +133,7 @@ main {
   justify-content: flex-end;
   margin-left: 380px;
 }
+
 .btn button {
   padding: 5px 15px;
   margin-left: 20px;
@@ -140,6 +141,11 @@ main {
   border: 1px solid #628727;
   border-radius: 2px;
   color: white;
+}
+
+.btn button:hover {
+  background-color: gold;
+  color: grey;
 }
 
 .contact {
@@ -205,4 +211,41 @@ aside h3 {
 
 .list li:hover {
   background-color: #f9f9f9;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 30px;
+  border-top: 2px solid #eeeeee;
+  font-size: 12px;
+}
+
+footer p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fb {
+  background-image: url("img/fb.png");
+  background-repeat: no-repeat;
+  background-position: 0%;
+  padding: 15px 0 15px 50px;
+  margin-right: 30px;
+}
+
+.tw {
+  background-image: url("img/twitter-icon.png");
+  background-repeat: no-repeat;
+  background-position: 0%;
+  padding: 15px 0 15px 50px;
 }
