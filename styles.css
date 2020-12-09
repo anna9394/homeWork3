@@ -19,6 +19,10 @@ body {
   color: #bdbdbd;
 }
 
+li {
+  list-style: none;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -44,6 +48,7 @@ header {
 }
 
 .header-logo {
+  display: flex;
   max-width: 320px;
   margin-top: 40px;
   font-family: "Ranchers", cursive;
@@ -51,8 +56,13 @@ header {
   color: #9e744a;
   background-image: url("img/shape.png");
   background-repeat: no-repeat;
-  background-position: 8% 10%;
+  background-position: 5% 10%;
   padding: 10px 0 10px 60px;
+}
+
+.header-logo:hover {
+  color: #9e744a;
+  text-decoration: none;
 }
 
 .header-menu {
@@ -104,7 +114,7 @@ main {
   display: flex;
   margin: 0 -15px;
   flex-wrap: wrap;
-  width: 80%;
+  max-width: 640px;
 }
 
 .card {
@@ -114,7 +124,6 @@ main {
 
 .card {
   max-width: 280px;
-  vertical-align: middle;
 }
 
 .card img {
@@ -128,18 +137,25 @@ main {
   padding: 15px 0;
 }
 
-.btn {
+.btns {
   display: flex;
   justify-content: flex-end;
-  margin-left: 380px;
+  margin-left: auto;
 }
-.btn button {
+
+.btns button {
   padding: 5px 15px;
   margin-left: 20px;
   background-color: #71a536;
   border: 1px solid #628727;
   border-radius: 2px;
   color: white;
+  cursor: pointer;
+}
+
+.btns button:hover {
+  background-color: gold;
+  color: grey;
 }
 
 .contact {
@@ -156,6 +172,7 @@ main {
   padding: 10px;
   vertical-align: middle;
   text-align: center;
+  text-align: left;
 }
 
 .contact-content:after {
@@ -169,7 +186,7 @@ main {
   border-top-color: #fbfbfb;
   border-bottom: 0;
   border-right: 2px solid #eeeeee;
-  margin-left: -22.5px;
+  margin-left: -48.5px;
   margin-bottom: -45px;
 }
 
@@ -183,20 +200,23 @@ main {
   background-position: 100% 5%;
 }
 
+aside {
+  max-width: 300px;
+}
+
 aside h3 {
   color: #404040;
   margin: 30px 30px 20px 15px;
 }
 
-.list {
-  list-style: none;
-}
-
 .list li {
-  padding: 5px 15px;
   border-top: 2px solid #eeeeee;
   font-size: 12px;
   line-height: 30px;
+}
+
+.list li a {
+  padding: 5px 15px;
 }
 
 .list li:last-child {
