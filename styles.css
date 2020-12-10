@@ -54,6 +54,9 @@ header {
   min-height: 105px;
   margin: 60px auto 0;
   padding: 30px;
+  border-top: 12px solid #95714a;
+  border-left: 12px solid#95714a;
+  border-right: 12px solid #95714a;
 }
 
 .header-logo {
@@ -86,6 +89,8 @@ header {
   margin: 0 auto;
   padding: 0 40px;
   line-height: 25px;
+  border-left: 12px solid #95714a;
+  border-right: 12px solid #95714a;
 }
 
 .content a {
@@ -106,6 +111,8 @@ main {
   max-width: 950px;
   margin: 0 auto;
   padding: 0 30px 30px 35px;
+  border-left: 12px solid #95714a;
+  border-right: 12px solid #95714a;
 }
 
 .main-container {
@@ -141,7 +148,7 @@ main {
   display: flex;
   justify-content: flex-end;
   margin-left: auto;
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
 .buttons button {
@@ -249,8 +256,12 @@ footer {
   background-color: white;
   max-width: 950px;
   margin: 0 auto;
+  margin-bottom: 50px;
   padding: 30px;
   font-size: 12px;
+  border-left: 12px solid #95714a;
+  border-right: 12px solid #95714a;
+  border-bottom: 12px solid #95714a;
 }
 
 footer::after {
@@ -263,27 +274,30 @@ footer::after {
   left: 30px;
 }
 
-footer p {
-  display: flex;
-  align-items: center;
-}
-
 .social {
   display: flex;
   justify-content: space-between;
 }
 
 .fb {
-  background-image: url("img/fb.png");
-  background-repeat: no-repeat;
-  background-position: 0%;
-  padding: 15px 0 15px 50px;
-  /* margin-right: 10px; */
+  position: relative;
 }
 
+.fb::before {
+  position: absolute;
+  content: url("img/fb.png");
+  right: 143px;
+  top: -10px;
+}
 .tw {
-  background-image: url("img/twitter-icon.png");
-  background-repeat: no-repeat;
-  background-position: 0%;
-  padding: 15px 0 15px 50px;
+  position: relative;
+  padding-left: 65px;
+  margin-left: 35px;
+}
+
+.tw::before {
+  position: absolute;
+  content: url("img/twitter-icon.png");
+  right: 153px;
+  top: -10px;
 }
