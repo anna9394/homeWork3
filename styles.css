@@ -17,6 +17,21 @@ img {
   height: auto;
 }
 
+.btn {
+  padding: 5px 20px;
+  margin-left: 20px;
+  background-color: #71a536;
+  border: 1px solid #628727;
+  border-radius: 2px;
+  color: white;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: gold;
+  color: grey;
+}
+
 body {
   background-color: #ffc657;
   background-image: url("img/layer.png");
@@ -84,6 +99,15 @@ header {
 
 .header-menu a {
   margin-left: 35px;
+}
+
+#menu-checkbox,
+#navigation-checkbox {
+  display: none;
+}
+
+.menuList-button {
+  display: none;
 }
 
 .content {
@@ -157,26 +181,6 @@ main {
   margin: 20px 0;
 }
 
-.buttons button {
-  padding: 5px 20px;
-  margin-left: 20px;
-  background-color: #71a536;
-  border: 1px solid #628727;
-  border-radius: 2px;
-  color: white;
-  cursor: pointer;
-}
-
-.buttons button:hover {
-  background-color: gold;
-  color: grey;
-}
-
-.button button:hover {
-  background-color: gold;
-  color: grey;
-}
-
 .contact-content {
   position: relative;
   margin: 25px 50px 20px 0;
@@ -247,6 +251,9 @@ aside h3 {
   background-color: #f9f9f9;
 }
 
+#contact-checkbox {
+  display: none;
+}
 .contact-h3 {
   margin: 0 auto;
 }
@@ -344,7 +351,7 @@ footer::after {
     justify-content: center;
   }
 
-  footer p{
+  footer p {
     order: 1;
     margin-top: 20px;
   }
@@ -366,7 +373,6 @@ footer::after {
 @media screen and (max-width: 690px) {
   main {
     flex-direction: column;
-    flex-direction: column-reverse;
   }
 
   .card {
@@ -380,9 +386,8 @@ footer::after {
   }
 
   .contact-list {
-    display: flex;
     justify-content: center;
-    
+    display: flex;
   }
 
   .contact-list li a {
@@ -393,7 +398,7 @@ footer::after {
   .contact-h3 {
     order: 1;
     text-align: center;
-    margin:20px 0;
+    margin: 20px 0;
   }
 
   .contact-list li a:first-child {
@@ -467,31 +472,149 @@ footer::after {
   main {
     padding: 0 20px 30px 20px;
   }
-
-  element.style {
-  }
-
-  @media screen and (max-width: 750px){
-  
+}
+@media screen and (max-width: 750px) {
   header {
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px 0px;
   }
-  
 }
 
 @media screen and (max-width: 445px) {
-  .header-menu {
-    flex-wrap: wrap;
-    justify-content: center;
+  .header-logo {
+    display: block;
+    margin-top: 20px;
   }
 
-  @media screen and (max-width: 350px) {
-    .buttons button {
-      padding: 2px 10px;
-      font-size: 12px;
-      }
+  .contact-h3 {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menuList-button {
+    display: block;
+  }
+
+  .container-list {
+    text-align: center;
+  }
+
+  .container-list h3 {
+    display: none;
+  }
+
+  .container-list ul {
+    display: none;
+  }
+
+  .list {
+    margin: 0 auto;
+    display: flex;
+    align-content: center;
+    text-align: center;
+    background-color: white;
+    display: none;
+    position: absolute;
+    left: calc(12px + 20px);
+    padding-bottom: 15px;
+    width: calc(100% - (12px + 20px) * 2);
+  }
+
+  aside {
+    position: relative;
+  }
+  .contact-list {
+    margin: 0 auto;
+    display: flex;
+    align-content: center;
+    text-align: center;
+    background-color: white;
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: calc(12px + 20px);
+    padding-bottom: 15px;
+    width: calc(100% - (12px + 20px) * 2);
+  }
+
+  #menu-checkbox:checked ~ ul,
+  #contact-checkbox:checked ~ ul {
+    display: block;
+    margin: 0 auto;
+  }
+
+  #menu-checkbox,
+  #contact-checkbox {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  #menu-checkbox,
+  #navigation-checkbox {
+    visibility: hidden;
+    position: absolute;
+    text-align: center;
+  }
+
+  #menu-checkbox:checked ~ ul,
+  #navigation-checkbox:checked ~ ul {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .contact-list li a {
+    border-top: 1px solid #eeeeee;
+    font-size: 14px;
+  }
+
+  .list li a {
+    border-top: 1px solid #eeeeee;
+    font-size: 16px;
+  }
+  .header-menu {
+    margin: 0 auto;
+    display: flex;
+    align-content: center;
+    background-color: white;
+    display: none;
+    position: absolute;
+    left: calc(12px + 20px);
+    padding-bottom: 15px;
+    width: calc(100% - (12px + 20px) * 2);
+  }
+  .header-menu li {
+    display: block;
+    border-top: 1px solid #eeeeee;
+  }
+
+  .header-menu li a {
+    padding: 5px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+  }
+
+  label[for="navigation-checkbox"] {
+    display: inline-block;
+    margin: 0 auto;
+  }
+
+  label[for="contact-checkbox"] {
+    align-self: center;
+    order: 1;
+    margin: 10px;
+  }
 }
 
-
+@media screen and (max-width: 350px) {
+  .btn {
+    padding: 2px 10px;
+    font-size: 12px;
+  }
+}
